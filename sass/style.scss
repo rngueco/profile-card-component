@@ -12,4 +12,109 @@ $dark-gray: hsl(0, 0%, 59%);
 body {
     font-size: math.div(18px, 16px) * 100%;
     font-family: 'Kumbh Sans', sans-serif;
+    background: {
+        color: $dark-cyan;
+        image: url("../images/bg-pattern-top.svg"), url("../images/bg-pattern-bottom.svg");
+        repeat: no-repeat, no-repeat;
+        size: 100%, 100%;
+        attachment: scroll, scroll;
+        position: top left, bottom right;
+
+    }
+}
+*, * * {
+    box-sizing: border-box;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 90vw;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: white;
+    text-align: center;
+}
+
+.card__header {
+    height: 140px;
+    background: {
+        image: url("../images/bg-pattern-card.svg");
+    }
+}
+
+.card__body {
+    position: relative;
+    padding: {
+        top: 3em;
+        bottom: 0;
+    }
+}
+
+.card__img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+.card__profile {
+    .name {
+        font-weight: bold;
+        color: $very-dark-desaturated-blue;
+    }
+
+    .age {
+        color: $dark-grayish-blue;
+        padding: 0 0.3em;
+    }
+
+    .location {
+        display: block;
+        color: $dark-gray;
+        font-size: 0.8em;
+        line-height: 2.5em;
+    }
+}
+
+.card__stats {
+    list-style: none;
+    width: 100%;
+    border-top: 1px solid rgb(235, 235, 235);
+    display: flex;
+    justify-content: space-around;
+    padding: 1.5em 1em;
+    margin: 0;
+    flex: {
+        direction: row;
+        wrap: nowrap;
+    }
+
+    span {
+        display: block;
+    }
+
+    .number {
+        color: $very-dark-desaturated-blue;
+        font-weight: bold;
+        margin-bottom: 0.5em;
+    }
+
+    .label {
+        font-size: 0.65em;
+        letter-spacing: 0.10em;
+        color: $dark-grayish-blue;
+    }
+}
+
+footer {
+    text-align: center;
+    font-size: 0.75em;
 }
