@@ -5,11 +5,22 @@ body {
   background-color: #19a2ae;
   background-image: url("../images/bg-pattern-top.svg"), url("../images/bg-pattern-bottom.svg");
   background-repeat: no-repeat, no-repeat;
-  background-size: 150%, 150%;
-  background-attachment: fixed, fixed;
-  background-position: top -150% left 190%, bottom -160% right 190%;
+  background-size: 978px, 978px;
+  background-position: top -400px left -300px, bottom -600px right -200px;
 }
 
+@media (max-width: 375px) {
+  body {
+    background-size: 150%, 150%;
+    background-attachment: fixed, fixed;
+    background-position: top -150% left 190%, bottom -160% right 190%;
+  }
+}
+@media (max-width: 900px) and (min-width: 376px) {
+  body {
+    background-position: top -400px left -500px, bottom -600px right -400px;
+  }
+}
 *, * * {
   box-sizing: border-box;
 }
@@ -22,7 +33,7 @@ main {
 }
 
 .card {
-  width: 90vw;
+  width: min(90vw, 375px);
   border-radius: 16px;
   overflow: hidden;
   background-color: white;
