@@ -5,9 +5,9 @@ body {
   background-color: #19a2ae;
   background-image: url("../images/bg-pattern-top.svg"), url("../images/bg-pattern-bottom.svg");
   background-repeat: no-repeat, no-repeat;
-  background-size: 100%, 100%;
-  background-attachment: scroll, scroll;
-  background-position: top left, bottom right;
+  background-size: 150%, 150%;
+  background-attachment: fixed, fixed;
+  background-position: top -150% left 190%, bottom -160% right 190%;
 }
 
 *, * * {

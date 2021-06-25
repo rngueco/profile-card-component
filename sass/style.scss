@@ -16,9 +16,9 @@ body {
         color: $dark-cyan;
         image: url("../images/bg-pattern-top.svg"), url("../images/bg-pattern-bottom.svg");
         repeat: no-repeat, no-repeat;
-        size: 100%, 100%;
-        attachment: scroll, scroll;
-        position: top left, bottom right;
+        size: 150%, 150%;
+        attachment: fixed, fixed;
+        position: top -150% left 190%, bottom -160% right 190%;
 
     }
 }
